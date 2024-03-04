@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  window.addEventListener("load", () => {
+  document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".loader-wrap").classList.add("loader-hidden");
     document.querySelector(".loader").classList.add("loader-hidden");
   });
