@@ -1,8 +1,9 @@
+window.addEventListener("load", () => {
+  document.querySelector(".loader-wrap").classList.add("loader-hidden");
+  document.querySelector(".loader").classList.add("loader-hidden");
+});
 $(document).ready(function () {
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelector(".loader-wrap").classList.add("loader-hidden");
-    document.querySelector(".loader").classList.add("loader-hidden");
-  });
+
   var btn = $("#button");
 
   $(window).scroll(function () {
