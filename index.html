@@ -60,7 +60,7 @@
                 <a href="https://www.instagram.com/widhi.0901/" target="_blank" class="contact-icon">
                   <i class="fa fa-instagram" aria-hidden="true"></i></a>
               </li>
-            </ul>
+            </ul>           
           </div>
         </div>
       </div>
@@ -350,8 +350,7 @@
           </a>
         </div>
         <div class="col-md-3 text-center col-padding animate-box">
-          <a href="" class="work text-decoration-none" style="background-image: url(./assets/image/work/GetPoint.png);"
-            loading="lazy">
+          <a href="" class="work text-decoration-none" style="background-image: url(./assets/image/work/GetPoint.png);" loading="lazy">
             <div class="desc">
               <h3>GetPoint</h3>
               <span>Marketplace</span>
@@ -359,8 +358,7 @@
           </a>
         </div>
         <div class="col-md-3 text-center col-padding animate-box">
-          <a href="" class="work text-decoration-none" style="background-image: url(./assets/image/work/XIMO-Pos.jpg);"
-            loading="lazy">
+          <a href="" class="work text-decoration-none" style="background-image: url(./assets/image/work/XIMO-Pos.jpg);" loading="lazy">
             <div class="desc">
               <h3>XIMO</h3>
               <span>Landing Page</span>
@@ -430,11 +428,6 @@
       </div>
     </div>
   </div>
-  <div id="player">
-    <button id="playButton">Play Random Music</button>
-    <audio id="audioPlayer"></audio>
-  </div>
-
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
@@ -444,85 +437,6 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script src="./assets/app.js"></script>
-  <script>
-    const songs = [
-        "./assets/Travis Scott - FE!N (Official Audio) ft. Playboi Carti.mp3",                        
-    ];
-    const audioPlayer = document.getElementById("audioPlayer");
-    const playButton = document.getElementById("playButton");
-
-    // Fungsi untuk memutar lagu secara acak
-    function playRandomSong() {
-      // Pilih lagu secara acak dari daftar
-      const randomIndex = Math.floor(Math.random() * songs.length);
-      const randomSong = songs[randomIndex];
-
-      // Setel URL lagu yang dipilih ke elemen audio
-      audioPlayer.src = randomSong;
-
-      // Putar musik
-      audioPlayer.play();
-
-      // Ubah tombol menjadi "Pause" saat musik diputar
-      playButton.textContent = "Pause";
-    }
-
-    // Fungsi toggle play/pause
-    playButton.addEventListener("click", () => {
-      if (audioPlayer.paused) {
-        playRandomSong();
-      } else {
-        audioPlayer.pause();
-        playButton.textContent = "Play Random Music";
-      }
-    });
-
-    // Mengembalikan tombol menjadi "Play" setelah musik selesai
-    audioPlayer.addEventListener("ended", () => {
-      playButton.textContent = "Play Random Music";
-    });
-
-    if ("mediaSession" in navigator) {
-      navigator.mediaSession.metadata = new MediaMetadata({
-        title: "Unforgettable",
-        artist: "Nat King Cole",
-        album: "The Ultimate Collection (Remastered)",
-        artwork: [
-          {
-            src: "https://images.unsplash.com/photo-1730973915515-e79273d90b7c?q=80&w=1665&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            sizes: "96x96",
-            type: "image/png",
-          },
-          {
-            src: "https://images.unsplash.com/photo-1730973915515-e79273d90b7c?q=80&w=1665&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            sizes: "128x128",
-            type: "image/png",
-          },
-          {
-            src: "https://images.unsplash.com/photo-1730973915515-e79273d90b7c?q=80&w=1665&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            sizes: "192x192",
-            type: "image/png",
-          },
-          {
-            src: "https://images.unsplash.com/photo-1730973915515-e79273d90b7c?q=80&w=1665&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            sizes: "256x256",
-            type: "image/png",
-          },
-          {
-            src: "https://images.unsplash.com/photo-1730973915515-e79273d90b7c?q=80&w=1665&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            sizes: "384x384",
-            type: "image/png",
-          },
-          {
-            src: "https://images.unsplash.com/photo-1730973915515-e79273d90b7c?q=80&w=1665&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-            sizes: "512x512",
-            type: "image/png",
-          },
-        ],
-      });
-    }
-
-  </script>
 </body>
 
 </html>
